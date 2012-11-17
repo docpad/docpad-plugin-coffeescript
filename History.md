@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.2 November 17, 2012
+	- Updated CoffeeScript from 1.3.x to 1.4.x
+
 - v2.1.1 August 10, 2012
 	- Re-added markdown files to npm distribution as they are required for the npm website
 
