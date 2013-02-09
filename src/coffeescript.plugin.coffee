@@ -5,6 +5,8 @@ module.exports = (BasePlugin) ->
 		# Plugin name
 		name: 'coffeescript'
 
+		config:
+			bare: false
 
 		# =============================
 		# Renderers
@@ -15,8 +17,10 @@ module.exports = (BasePlugin) ->
 			{content} = opts
 			coffee = require('coffee-script')
 
+			config = JSON.parse JSON.stringify @config
+
 			# Render
-			opts.content = coffee.compile(content)
+			opts.content = coffee.compile(content, config)
 
 			# Done
 			next()
