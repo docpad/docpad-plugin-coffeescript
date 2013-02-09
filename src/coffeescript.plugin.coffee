@@ -17,6 +17,7 @@ module.exports = (BasePlugin) ->
 			{content} = opts
 			coffee = require('coffee-script')
 
+			# Needs to be a deep clone because coffee modifies the object passed
 			config = JSON.parse JSON.stringify @config
 
 			# Render
