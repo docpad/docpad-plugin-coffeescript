@@ -1,5 +1,9 @@
 ## History
 
+- v2.1.3 March 7, 2013
+	- Dependency upgrades
+		-  `coffee-script` from 1.4.x to ~1.4.0
+
 - v2.1.2 November 17, 2012
 	- Updated CoffeeScript from 1.3.x to 1.4.x
 
