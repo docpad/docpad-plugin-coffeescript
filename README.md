@@ -1,7 +1,7 @@
 # CoffeeScript Plugin for DocPad
 Adds support for [CoffeeScript](http://coffeescript.org/) to JavaScript compilation to [DocPad](https://docpad.org)
 
-Convention:  `.js.coffee`
+Convention:  `.js.coffee|litcoffee`
 
 
 ## Install
@@ -9,6 +9,10 @@ Convention:  `.js.coffee`
 ```
 npm install --save docpad-plugin-coffeescript
 ```
+
+
+## Configure
+You can customise the compiler optons sent to the CoffeeScript compiler via the plugin's `compileOptions` config option
 
 
 ## History

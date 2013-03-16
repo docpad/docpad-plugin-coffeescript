@@ -5,38 +5,32 @@ module.exports = (BasePlugin) ->
 		# Plugin name
 		name: 'coffeescript'
 
-
-		# =============================
-		# Renderers
-
-		# Render CoffeeScript to JavaScript
-		renderCoffeeScriptToJavaScript: (opts,next) ->
-			# Prepare
-			{content} = opts
-			coffee = require('coffee-script')
-
-			# Render
-			opts.content = coffee.compile(content)
-
-			# Done
-			next()
-
-
-		# =============================
-		# Events
+		# Plugin config
+		config:
+			compileOptions: {}
 
 		# Render
 		# Called per document, for each extension conversion. Used to render one extension to another.
-		render: (opts,next) ->
+		render: (opts) ->
 			# Prepare
-			{inExtension,outExtension} = opts
+			{inExtension,outExtension,file} = opts
 
 			# CoffeeScript to JavaScript
-			if inExtension is 'coffee' and outExtension in ['js',null]
-				# Render and complete
-				@renderCoffeeScriptToJavaScript(opts,next)
+			if inExtension in ['coffee','litcoffee'] and outExtension in ['js',null]
+				# Prepare
+				coffee = require('coffee-script')
+				fileFullPath = file.get('fullPath')
+				compileOptions = {
+					filename: fileFullPath
+					literate: coffee.helpers.isLiterate(fileFullPath)
+				}
 
-			# Something else
-			else
-				# Nothing to do, return back to DocPad
-				return next()
+				# Merge options
+				for own key,value of @getConfig().compileOptions
+					compileOptions[key] ?= value
+
+				# Render
+				opts.content = coffee.compile(opts.content, compileOptions)
+
+			# Done
+			return
