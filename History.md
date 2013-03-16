@@ -7,11 +7,13 @@
 		-  `coffee-script` from ~1.4.0 to ~1.6.1
 
 - v2.1.3 March 7, 2013
+	- Repackaged
 	- Dependency upgrades
 		-  `coffee-script` from 1.4.x to ~1.4.0
 
 - v2.1.2 November 17, 2012
-	- Updated CoffeeScript from 1.3.x to 1.4.x
+	- Dependency upgrades
+		-  `coffee-script` from 1.3.x to 1.4.x
 
 - v2.1.1 August 10, 2012
 	- Re-added markdown files to npm distribution as they are required for the npm website
