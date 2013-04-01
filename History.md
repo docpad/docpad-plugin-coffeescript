@@ -1,5 +1,8 @@
 ## History
 
+- v2.2.1 April 1, 2013
+	- Dependency upgrades
+
 - v2.2.0 March 16, 2013
 	- Added support for `litcoffee` files
 	- Added the ability to customise the compiler optons sent to the CoffeeScript compiler via the plugin's `compileOptions` config option

@@ -1,6 +1,6 @@
 {
 	"name": "docpad-plugin-coffeescript",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"description": "Adds support for CoffeeScript to JavaScript compilation to DocPad",
 	"homepage": "http://docpad.org/plugin/coffeescript",
 	"keywords": [
@@ -29,7 +29,7 @@
 		"docpad": "6.x"
 	},
 	"dependencies": {
-		"coffee-script": "~1.6.1"
+		"coffee-script": "~1.6.2"
 	},
 	"main": "./out/coffeescript.plugin.js",
 	"scripts": {
