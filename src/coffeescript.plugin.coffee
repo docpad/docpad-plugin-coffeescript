@@ -14,15 +14,16 @@ module.exports = (BasePlugin) ->
 		render: (opts) ->
 			# Prepare
 			{inExtension,outExtension,file} = opts
+			literate = false
 
 			# CoffeeScript to JavaScript
-			if inExtension in ['coffee','litcoffee'] and outExtension in ['js',null]
+			if (inExtension in ['coffee','litcoffee'] and outExtension in ['js',null]) or (inExtension in ['md','markdown'] and outExtension is 'js' and literate = true)
 				# Prepare
 				coffee = require('coffee-script')
 				fileFullPath = file.get('fullPath')
 				compileOptions = {
 					filename: fileFullPath
-					literate: coffee.helpers.isLiterate(fileFullPath)
+					literate: literate or coffee.helpers.isLiterate(fileFullPath)
 				}
 
 				# Merge options

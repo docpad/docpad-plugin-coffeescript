@@ -1,5 +1,9 @@
 ## History
 
+- v2.2.2 June 26, 2013
+	- Added support for `md` and `markdown` extensions for litcoffee
+	- Repackaged
+
 - v2.2.1 April 1, 2013
 	- Dependency upgrades
 
