@@ -1,38 +1,42 @@
 {
-	"name": "docpad-plugin-coffeescript",
-	"version": "2.2.2",
-	"description": "Adds support for CoffeeScript to JavaScript compilation to DocPad",
-	"homepage": "http://docpad.org/plugin/coffeescript",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"coffee",
-		"coffeescript",
-		"coffee-script"
-	],
-	"author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-	"maintainers": [
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"contributors": [
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"bugs": {
-		"url": "http://docpad.org/plugin/coffeescript/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "https://github.com/docpad/docpad-plugin-coffeescript.git"
-	},
-	"engines" : {
-		"node": ">=0.4",
-		"docpad": "6.x"
-	},
-	"dependencies": {
-		"coffee-script": "~1.6.2"
-	},
-	"main": "./out/coffeescript.plugin.js",
-	"scripts": {
-		"test": "node ./out/coffeescript.test.js"
-	}
+  "name": "docpad-plugin-coffeescript",
+  "version": "2.2.2",
+  "description": "Adds support for CoffeeScript to JavaScript compilation to DocPad",
+  "homepage": "http://docpad.org/plugin/coffeescript",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "coffee",
+    "coffeescript",
+    "coffee-script"
+  ],
+  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "maintainers": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "contributors": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "bugs": {
+    "url": "http://docpad.org/plugin/coffeescript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docpad/docpad-plugin-coffeescript.git"
+  },
+  "engines": {
+    "node": ">=0.4",
+    "docpad": "6.x"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6.2"
+  },
+  "main": "./out/coffeescript.plugin.js",
+  "scripts": {
+    "test": "node ./out/coffeescript.test.js"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  },
+  "devDependencies": {}
 }
