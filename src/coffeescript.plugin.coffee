@@ -31,7 +31,15 @@ module.exports = (BasePlugin) ->
 					compileOptions[key] ?= value
 
 				# Render
-				opts.content = coffee.compile(opts.content, compileOptions)
+				try
+					opts.content = coffee.compile(opts.content, compileOptions)
+				catch err
+					if err.location
+						start = "#{err.location.first_line}:#{err.location.first_column}"
+						finish = "#{err.location.last_line}:#{err.location.last_column}"
+						err.message += " at #{fileFullPath}:#{start}"
+						err.message += " to #{finish}"  if finish isnt start
+					return err
 
 			# Done
 			return

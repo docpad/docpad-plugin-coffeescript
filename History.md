@@ -1,4 +1,8 @@
-## History
+# History
+
+- v2.2.3 November 8, 2013
+	- Errors will now tell you which file, line, and character they were encountered for (when available)
+	- Repackaged
 
 - v2.2.2 June 26, 2013
 	- Added support for `md` and `markdown` extensions for litcoffee

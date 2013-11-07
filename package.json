@@ -1,8 +1,18 @@
 {
   "name": "docpad-plugin-coffeescript",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Adds support for CoffeeScript to JavaScript compilation to DocPad",
   "homepage": "http://docpad.org/plugin/coffeescript",
+  "license": {
+    "type": "MIT"
+  },
+  "badges": {
+    "travis": true,
+    "npm": true,
+    "gittip": "docpad",
+    "flattr": "344188/balupton-on-Flattr",
+    "paypal": "QB8GQPZAH84N6"
+  },
   "keywords": [
     "docpad",
     "docpad-plugin",
@@ -10,7 +20,7 @@
     "coffeescript",
     "coffee-script"
   ],
-  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "author": "2012+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me), 2011 Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
   "maintainers": [
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
@@ -28,14 +38,17 @@
     "node": ">=0.4"
   },
   "dependencies": {
-    "coffee-script": "~1.6.2"
-  },
-  "main": "./out/coffeescript.plugin.js",
-  "scripts": {
-    "test": "node ./out/coffeescript.test.js"
+    "coffee-script": "~1.6.3"
   },
   "peerDependencies": {
     "docpad": "6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "docpad": "6",
+    "projectz": "~0.2.6"
+  },
+  "main": "./out/coffeescript.plugin.js",
+  "scripts": {
+    "test": "node ./out/coffeescript.test.js"
+  }
 }
