@@ -1,5 +1,8 @@
 # History
 
+- v2.3.0 February 10, 2013
+	- Updated dependencies
+
 - v2.2.3 November 8, 2013
 	- Errors will now tell you which file, line, and character they were encountered for (when available)
 	- Repackaged
@@ -9,7 +12,7 @@
 	- Repackaged
 
 - v2.2.1 April 1, 2013
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.2.0 March 16, 2013
 	- Added support for `litcoffee` files
@@ -19,12 +22,10 @@
 
 - v2.1.3 March 7, 2013
 	- Repackaged
-	- Dependency upgrades
-		-  `coffee-script` from 1.4.x to ~1.4.0
+	- Updated dependencies
 
 - v2.1.2 November 17, 2012
-	- Dependency upgrades
-		-  `coffee-script` from 1.3.x to 1.4.x
+	- Updated dependencies
 
 - v2.1.1 August 10, 2012
 	- Re-added markdown files to npm distribution as they are required for the npm website
@@ -42,4 +43,4 @@
 
 - v1.0.0 April 14, 2012
 	- Updated for DocPad v5.0
-	- Updated to CoffeeScript 1.3.x
+	- Updated dependencies
