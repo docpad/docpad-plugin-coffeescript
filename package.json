@@ -41,7 +41,7 @@
     "node": ">=0.4"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.7.1"
   },
   "peerDependencies": {
     "docpad": "6"
