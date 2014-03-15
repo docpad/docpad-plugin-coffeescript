@@ -23,16 +23,40 @@ module.exports = (BasePlugin) ->
 				fileFullPath = file.get('fullPath')
 				compileOptions = {
 					filename: fileFullPath
+					sourceFiles: [file.get('url') + '.coffee'] # but actually included inline
+					generatedFile: file.get('url')
 					literate: literate or coffee.helpers.isLiterate(fileFullPath)
+					sourceMap: false
 				}
 
 				# Merge options
 				for own key,value of @getConfig().compileOptions
-					compileOptions[key] ?= value
+					if compileOptions[key]?
+						compileOptions[key] = value
 
 				# Render
 				try
-					opts.content = coffee.compile(opts.content, compileOptions)
+					compiled = coffee.compile(opts.content, compileOptions)
+
+					if typeof compiled is 'object'
+						{js, v3SourceMap} = compiled
+					else
+						js = compiled
+
+					if v3SourceMap
+						# Encode the coffeescript source directly into the sourcemap
+						v3SourceMap = JSON.parse v3SourceMap
+						v3SourceMap.sourcesContent = [opts.content]
+						v3SourceMap = JSON.stringify v3SourceMap, null, 2
+
+						# Base64 encode the sourcemap into the JS output
+						js = "" +
+							js +
+							"\n//# sourceMappingURL=data:application/json;base64," +
+							new Buffer(unescape(encodeURIComponent(v3SourceMap)), 'binary').toString('base64')
+
+					opts.content = js
+
 				catch err
 					if err.location
 						start = "#{err.location.first_line}:#{err.location.first_column}"
