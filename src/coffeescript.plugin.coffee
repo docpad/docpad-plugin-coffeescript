@@ -26,13 +26,11 @@ module.exports = (BasePlugin) ->
 					sourceFiles: [file.get('url') + '.coffee'] # but actually included inline
 					generatedFile: file.get('url')
 					literate: literate or coffee.helpers.isLiterate(fileFullPath)
-					sourceMap: false
 				}
 
 				# Merge options
 				for own key,value of @getConfig().compileOptions
-					if compileOptions[key]?
-						compileOptions[key] = value
+					compileOptions[key] ?= value
 
 				# Render
 				try
