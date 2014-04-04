@@ -1,5 +1,8 @@
 # History
 
+- v2.4.0 April 4, 2014
+	- Support for embedded sourcemaps
+
 - v2.3.0 February 10, 2013
 	- Updated dependencies
 
