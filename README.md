@@ -73,6 +73,7 @@ No sponsors yet! Will you be the first?
 These amazing people have contributed code to this project:
 
 - [Benjamin Lupton](https://github.com/balupton) <b@lupton.cc> — [view contributions](https://github.com/docpad/docpad-plugin-coffeescript/commits?author=balupton)
+- [dominics](https://github.com/dominics) — [view contributions](https://github.com/docpad/docpad-plugin-coffeescript/commits?author=dominics)
 - [shinnn](https://github.com/shinnn) — [view contributions](https://github.com/docpad/docpad-plugin-coffeescript/commits?author=shinnn)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-coffeescript/blob/master/CONTRIBUTING.md#files)
