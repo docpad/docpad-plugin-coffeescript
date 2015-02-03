@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "docpad": "6",
-    "projectz": "~0.3.17"
+    "projectz": "^0.3.17"
   },
   "main": "./out/coffeescript.plugin.js",
   "scripts": {
