@@ -1,5 +1,5 @@
 # Import
-coffee = require('coffee-script')
+coffee = require('coffeescript')
 
 # Export Plugin
 module.exports = (BasePlugin) ->
