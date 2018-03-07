@@ -56,7 +56,7 @@
     "url": "https://github.com/docpad/docpad-plugin-coffeescript.git"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": ">=6"
   },
   "editions": [
     {
