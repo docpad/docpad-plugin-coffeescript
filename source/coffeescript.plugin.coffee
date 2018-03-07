@@ -1,3 +1,6 @@
+# Import
+coffee = require('coffee-script')
+
 # Export Plugin
 module.exports = (BasePlugin) ->
 	# Define Plugin
@@ -19,12 +22,11 @@ module.exports = (BasePlugin) ->
 			# CoffeeScript to JavaScript
 			if (inExtension in ['coffee','litcoffee'] and outExtension in ['js',null]) or (inExtension in ['md','markdown'] and outExtension is 'js' and literate = true)
 				# Prepare
-				coffee = require('coffee-script')
 				fileFullPath = file.get('fullPath')
 				compileOptions = {
 					filename: fileFullPath
-					sourceFiles: [file.get('url') + '.coffee'] # but actually included inline
-					generatedFile: file.get('url')
+					# sourceFiles: [file.get('url') + '.coffee'] # but actually included inline
+					# generatedFile: file.get('url')
 					literate: literate or coffee.helpers.isLiterate(fileFullPath)
 				}
 
