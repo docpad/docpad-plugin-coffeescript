@@ -1,10 +1,9 @@
 # History
 
 ## v2.7.0 2018 March 7
-- Now uses CoffeeScript v2 for compilation
+- Now uses CoffeeScript v2 for compilation for node versions which support it (at time of testing that is node v6 and above), otherwise uses CoffeeScript v1
 - Now compiled with CoffeeScript v2
 - Updated base files
-- Minimum node version is now Node v6, as that is the earliest node version that CoffeeScript v2 supports
 
 ## v2.6.0 2017 April 17
 - Updated dependencies

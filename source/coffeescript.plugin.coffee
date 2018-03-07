@@ -1,5 +1,3 @@
-# Import
-coffee = require('coffeescript')
 
 # Export Plugin
 module.exports = (BasePlugin) ->
@@ -18,6 +16,12 @@ module.exports = (BasePlugin) ->
 			# Prepare
 			{inExtension,outExtension,file} = opts
 			literate = false
+
+			# Import
+			try
+				coffee = require('coffeescript')
+			catch
+				coffee = require('coffee-script')
 
 			# CoffeeScript to JavaScript
 			if (inExtension in ['coffee','litcoffee'] and outExtension in ['js',null]) or (inExtension in ['md','markdown'] and outExtension is 'js' and literate = true)
