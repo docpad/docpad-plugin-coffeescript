@@ -1,6 +1,7 @@
 # History
 
 ## v2.7.0 2018 March 7
+- Minimum supported node version now 0.10, as that now DocPad's min node version too
 - Now uses CoffeeScript v2 for compilation for node versions which support it (at time of testing that is node v6 and above), otherwise uses CoffeeScript v1
 - Now compiled with CoffeeScript v2
 - Updated base files
