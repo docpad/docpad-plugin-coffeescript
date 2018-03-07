@@ -99,7 +99,7 @@
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "coffeelint": "^2.1.0",
-    "docpad": "^6.79.4",
+    "docpad": "^6.80.0-beta",
     "projectz": "^1.4.0"
   },
   "peerDependencies": {
